@@ -9,10 +9,18 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="container header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary navigation">
       <div class="brand">Kyle Morgan</div>
-      <div class="nav-links">
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
         <a href="#featured">Featured</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
@@ -21,7 +29,7 @@
     </nav>
 
     <div class="hero">
-      <div>
+      <div class="reveal">
         <h1>Kyle Morgan</h1>
         <p class="subtitle">Data Analyst • SQL • Python • Tableau • ML Projects</p>
 
@@ -46,7 +54,7 @@
         </div>
       </div>
 
-      <div class="card profile">
+      <div class="card profile reveal">
         <img class="headshot" src="assets/headshot.jpg" alt="Photo of Kyle Morgan" />
         <div class="profile-top">
           <div>
@@ -66,12 +74,14 @@
 
   <!-- FEATURED DEMO -->
   <section class="container section" id="featured">
-    <div class="section-head">
-      <h2>Featured Dashboard / Demo</h2>
-      <p class="muted">A quick view of my strongest work</p>
+    <div class="section-head reveal">
+      <div>
+        <h2>Featured Dashboard / Demo</h2>
+        <p class="muted">A quick view of my strongest work</p>
+      </div>
     </div>
 
-    <div class="card featured">
+    <div class="card featured reveal">
       <div class="featured-left">
         <h3>Fulfillment Performance & Bottleneck Analysis</h3>
         <p class="muted">Olist Brazilian E-Commerce (2016–2018)</p>
@@ -92,20 +102,27 @@
         </div>
       </div>
 
-      <div class="featured-right">
+      <div class="featured-right" aria-label="Featured dashboard preview">
         <img class="demo-img" src="assets/olist-demo.png" alt="Dashboard preview" onerror="this.style.display='none'">
+        <div class="demo-fallback muted" hidden>
+          Add a screenshot at <code>assets/olist-demo.png</code> to show a preview here.
+        </div>
       </div>
     </div>
   </section>
 
-  <main class="container">
+  <main class="container" id="main">
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <div class="section-head">
-        <h2>Projects</h2>
+      <div class="section-head reveal">
+        <div>
+          <h2>Projects</h2>
+          <p class="muted">Search + filter to find the work that matches the job.</p>
+        </div>
+
         <div class="controls">
-          <input id="search" type="search" placeholder="Search projects (e.g., Tableau, SQL, ML)" />
-          <select id="tagFilter">
+          <input id="search" type="search" placeholder="Search projects (e.g., Tableau, SQL, ML)" aria-label="Search projects" />
+          <select id="tagFilter" aria-label="Filter by tag">
             <option value="all">All tags</option>
             <option value="sql">SQL</option>
             <option value="python">Python</option>
@@ -116,7 +133,7 @@
       </div>
 
       <div id="projectGrid" class="grid">
-        <a class="project-card"
+        <a class="project-card reveal"
            href="projects/olist.html"
            data-tags="sql,tableau,python"
            data-title="Fulfillment Performance & Bottleneck Analysis">
@@ -125,7 +142,7 @@
             <h3>Fulfillment Performance & Bottleneck Analysis</h3>
             <p class="muted">Olist Brazilian E-Commerce (2016–2018)</p>
           </div>
-          <p>
+          <p class="project-desc">
             Diagnoses delivery delays, decomposes cycle time, and identifies bottlenecks
             using SQL-engineered metrics and dashboard storytelling.
           </p>
@@ -134,39 +151,51 @@
           </div>
         </a>
 
-        <a class="project-card placeholder" href="#" aria-disabled="true"
+        <a class="project-card placeholder reveal"
+           href="#"
+           aria-disabled="true"
+           tabindex="-1"
            data-tags="ml,python"
            data-title="Planned: Market Sentiment vs Price Action">
           <div class="project-top">
             <h3>Planned: Market Sentiment vs Price Action</h3>
             <p class="muted">Finance • NLP • Time series</p>
           </div>
-          <p>Pipeline to collect sentiment, engineer features, and test whether sentiment leads price movements.</p>
+          <p class="project-desc">
+            Pipeline to collect sentiment, engineer features, and test whether sentiment leads price movements.
+          </p>
           <div class="tags"><span>ML</span><span>Python</span></div>
         </a>
 
-        <a class="project-card placeholder" href="#" aria-disabled="true"
+        <a class="project-card placeholder reveal"
+           href="#"
+           aria-disabled="true"
+           tabindex="-1"
            data-tags="sql,python"
            data-title="Planned: ETF Overlap & Concentration Risk">
           <div class="project-top">
             <h3>Planned: ETF Overlap & Concentration Risk</h3>
             <p class="muted">Finance • Portfolio analytics</p>
           </div>
-          <p>Tool that quantifies overlap across ETFs and exposes hidden concentration by issuer and sector.</p>
+          <p class="project-desc">
+            Tool that quantifies overlap across ETFs and exposes hidden concentration by issuer and sector.
+          </p>
           <div class="tags"><span>SQL</span><span>Python</span></div>
         </a>
       </div>
     </section>
 
-    <!-- EDUCATION (last) -->
+    <!-- EDUCATION -->
     <section id="education" class="section">
-      <div class="section-head">
-        <h2>Education</h2>
-        <p class="muted">Degrees and academic focus</p>
+      <div class="section-head reveal">
+        <div>
+          <h2>Education</h2>
+          <p class="muted">Degrees and academic focus</p>
+        </div>
       </div>
 
       <div class="edu-grid">
-        <div class="card edu">
+        <div class="card edu reveal">
           <div class="edu-top">
             <img class="edu-logo" src="assets/mercer.png" alt="Mercer University logo" onerror="this.style.display='none'">
             <div>
@@ -180,7 +209,7 @@
           </ul>
         </div>
 
-        <div class="card edu">
+        <div class="card edu reveal">
           <div class="edu-top">
             <img class="edu-logo" src="assets/gsu.png" alt="Georgia Southern University logo" onerror="this.style.display='none'">
             <div>
@@ -193,7 +222,7 @@
           </ul>
         </div>
 
-        <div class="card edu">
+        <div class="card edu reveal">
           <div class="edu-top">
             <img class="edu-logo" src="assets/ksu.png" alt="Kennesaw State University logo" onerror="this.style.display='none'">
             <div>
@@ -209,7 +238,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
       <h2>Contact</h2>
       <p class="muted">The best way to reach me is LinkedIn.</p>
     </section>
@@ -222,5 +251,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
