@@ -1,4 +1,4 @@
-// Year in footer
+// Footer year
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -34,8 +34,8 @@ if (searchEl) searchEl.addEventListener("input", applyFilters);
 if (filterEl) filterEl.addEventListener("change", applyFilters);
 applyFilters();
 
-// Active nav link highlighting
-const sections = ["featured", "projects", "education", "contact"]
+// Active nav highlighting
+const sections = ["featured", "insights", "projects", "education", "contact"]
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 
@@ -54,7 +54,7 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((s) => sectionObserver.observe(s));
 
-// Reveal animations (safe)
+// Reveal animations
 const reveals = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
   (entries) => {
