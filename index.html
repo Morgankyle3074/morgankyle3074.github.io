@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kyle Morgan | Portfolio</title>
   <meta name="description" content="Kyle Morgan — Data Analyst portfolio featuring SQL, Python, Tableau, and ML projects." />
+
+  <!-- Enables safe animations without ever blanking the page -->
+  <script>document.documentElement.classList.add('js');</script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="container header">
-    <nav class="nav" aria-label="Primary navigation">
-      <div class="brand">Kyle Morgan</div>
-
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="burger" aria-hidden="true"></span>
-      </button>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Kyle Morgan</span>
+      </div>
 
       <div class="nav-links" id="navLinks">
         <a href="#featured">Featured</a>
@@ -26,226 +26,295 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-    </nav>
-
-    <div class="hero">
-      <div class="reveal">
-        <h1>Kyle Morgan</h1>
-        <p class="subtitle">Data Analyst • SQL • Python • Tableau • ML Projects</p>
-
-        <div class="social">
-          <a class="btn" href="https://github.com/morgankyle3074" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="assets/Kyle_Morgan_Resume.pdf" target="_blank" rel="noreferrer" download>Resume</a>
-          <a class="btn ghost" href="#projects">View Projects</a>
-        </div>
-
-        <p class="about">
-          I build end-to-end analytics projects that turn messy data into decision-ready insights.
-          My workflow typically includes SQL metric engineering, Python-based modeling and evaluation,
-          and interactive dashboard storytelling.
-        </p>
-
-        <div class="chips">
-          <span class="chip">SQL</span>
-          <span class="chip">Python</span>
-          <span class="chip">Tableau</span>
-          <span class="chip">Machine Learning</span>
-        </div>
-      </div>
-
-      <div class="card profile reveal">
-        <img class="headshot" src="assets/headshot.jpg" alt="Photo of Kyle Morgan" />
-        <div class="profile-top">
-          <div>
-            <h2>About</h2>
-            <p class="muted">Atlanta, GA • Analytics & ML</p>
-          </div>
-        </div>
-
-        <ul class="bullets">
-          <li>SQL pipelines + metric engineering</li>
-          <li>Python modeling + evaluation</li>
-          <li>Tableau dashboards + storytelling</li>
-        </ul>
-      </div>
     </div>
   </header>
 
-  <!-- FEATURED DEMO -->
-  <section class="container section" id="featured">
-    <div class="section-head reveal">
-      <div>
-        <h2>Featured Dashboard / Demo</h2>
-        <p class="muted">A quick view of my strongest work</p>
+  <main>
+    <!-- HERO -->
+    <section class="hero-wrap">
+      <div class="container hero">
+        <div class="hero-left reveal">
+          <p class="eyebrow">Data Analyst • SQL • Python • Tableau</p>
+          <h1>End-to-End analytics that turns messy data into decisions.</h1>
+          <p class="lead">
+            I build full analytics workflows: SQL metric engineering, Python modeling & evaluation,
+            and dashboard storytelling that executives can act on.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="https://github.com/morgankyle3074" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="assets/Kyle_Morgan_Resume.pdf" target="_blank" rel="noreferrer" download>Resume</a>
+            <a class="btn ghost" href="#projects">View Projects</a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">SQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Machine Learning</span>
+          </div>
+
+          <!-- KPI tiles -->
+          <div class="kpi-grid reveal">
+            <div class="kpi">
+              <div class="kpi-num">3+</div>
+              <div class="kpi-label">End-to-End Projects</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">SQL</div>
+              <div class="kpi-label">Metric Engineering</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">Tableau</div>
+              <div class="kpi-label">Interactive Dashboards</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">Python</div>
+              <div class="kpi-label">Modeling + Evaluation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="profile-card">
+            <div class="profile-top">
+              <img class="headshot" src="assets/headshot.jpg" alt="Photo of Kyle Morgan" onerror="this.style.display='none'"/>
+              <div class="profile-meta">
+                <h2>About</h2>
+                <p class="muted">Atlanta, GA • Analytics & ML</p>
+              </div>
+            </div>
+
+            <ul class="bullets">
+              <li>SQL pipelines + metric engineering</li>
+              <li>Python modeling + evaluation</li>
+              <li>Tableau dashboards + storytelling</li>
+            </ul>
+
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <span class="mini-label">Focus</span>
+                <span class="mini-value">Corporate Analytics</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-label">Stack</span>
+                <span class="mini-value">SQL • Python • Tableau</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual area (hero image / banner) -->
+          <div class="hero-visual reveal">
+            <img src="assets/hero-banner.jpg" alt="Portfolio banner" onerror="this.style.display='none'">
+            <div class="visual-fallback">
+              <strong>Add a banner image</strong>
+              <p class="muted">Place a file at <code>assets/hero-banner.jpg</code> for a clean hero visual.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card featured reveal">
-      <div class="featured-left">
-        <h3>Fulfillment Performance & Bottleneck Analysis</h3>
-        <p class="muted">Olist Brazilian E-Commerce (2016–2018)</p>
-
-        <p>
-          This dashboard decomposes fulfillment cycle time into operational components to explain late deliveries.
-          It highlights last-mile duration as the dominant driver and shows trends and geographic variation to
-          support operational decisions.
-        </p>
-
-        <div class="tags">
-          <span>SQL</span><span>Tableau</span><span>Python</span>
+    <!-- FEATURED -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Featured Dashboard / Demo</h2>
+            <p class="muted">A quick view of my strongest work</p>
+          </div>
         </div>
 
-        <div class="social" style="margin-top:12px;">
-          <a class="btn" href="projects/olist.html">View Project Page</a>
-          <a class="btn ghost" href="YOUR_TABLEAU_PUBLIC_LINK" target="_blank" rel="noreferrer">Open in Tableau</a>
-        </div>
-      </div>
-
-      <div class="featured-right" aria-label="Featured dashboard preview">
-        <img class="demo-img" src="assets/olist-demo.png" alt="Dashboard preview" onerror="this.style.display='none'">
-        <div class="demo-fallback muted" hidden>
-          Add a screenshot at <code>assets/olist-demo.png</code> to show a preview here.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="container" id="main">
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="section-head reveal">
-        <div>
-          <h2>Projects</h2>
-          <p class="muted">Search + filter to find the work that matches the job.</p>
-        </div>
-
-        <div class="controls">
-          <input id="search" type="search" placeholder="Search projects (e.g., Tableau, SQL, ML)" aria-label="Search projects" />
-          <select id="tagFilter" aria-label="Filter by tag">
-            <option value="all">All tags</option>
-            <option value="sql">SQL</option>
-            <option value="python">Python</option>
-            <option value="tableau">Tableau</option>
-            <option value="ml">ML</option>
-          </select>
-        </div>
-      </div>
-
-      <div id="projectGrid" class="grid">
-        <a class="project-card reveal"
-           href="projects/olist.html"
-           data-tags="sql,tableau,python"
-           data-title="Fulfillment Performance & Bottleneck Analysis">
-          <img class="thumb" src="assets/olist-cover.png" alt="Project thumbnail" onerror="this.style.display='none'">
-          <div class="project-top">
+        <div class="featured card reveal">
+          <div class="featured-left">
             <h3>Fulfillment Performance & Bottleneck Analysis</h3>
             <p class="muted">Olist Brazilian E-Commerce (2016–2018)</p>
-          </div>
-          <p class="project-desc">
-            Diagnoses delivery delays, decomposes cycle time, and identifies bottlenecks
-            using SQL-engineered metrics and dashboard storytelling.
-          </p>
-          <div class="tags">
-            <span>SQL</span><span>Tableau</span><span>Python</span>
-          </div>
-        </a>
 
-        <a class="project-card placeholder reveal"
-           href="#"
-           aria-disabled="true"
-           tabindex="-1"
-           data-tags="ml,python"
-           data-title="Planned: Market Sentiment vs Price Action">
-          <div class="project-top">
-            <h3>Planned: Market Sentiment vs Price Action</h3>
-            <p class="muted">Finance • NLP • Time series</p>
-          </div>
-          <p class="project-desc">
-            Pipeline to collect sentiment, engineer features, and test whether sentiment leads price movements.
-          </p>
-          <div class="tags"><span>ML</span><span>Python</span></div>
-        </a>
+            <p class="body">
+              This dashboard decomposes fulfillment cycle time into operational components to explain late deliveries.
+              It highlights last-mile duration as the dominant driver and shows trends and geographic variation to support decisions.
+            </p>
 
-        <a class="project-card placeholder reveal"
-           href="#"
-           aria-disabled="true"
-           tabindex="-1"
-           data-tags="sql,python"
-           data-title="Planned: ETF Overlap & Concentration Risk">
-          <div class="project-top">
-            <h3>Planned: ETF Overlap & Concentration Risk</h3>
-            <p class="muted">Finance • Portfolio analytics</p>
+            <div class="tags">
+              <span>SQL</span><span>Tableau</span><span>Python</span>
+            </div>
+
+            <div class="cta-row" style="margin-top: 12px;">
+              <a class="btn primary" href="projects/olist.html">View Project Page</a>
+              <a class="btn ghost" href="YOUR_TABLEAU_PUBLIC_LINK" target="_blank" rel="noreferrer">Open in Tableau</a>
+            </div>
           </div>
-          <p class="project-desc">
-            Tool that quantifies overlap across ETFs and exposes hidden concentration by issuer and sector.
-          </p>
-          <div class="tags"><span>SQL</span><span>Python</span></div>
-        </a>
+
+          <div class="featured-right">
+            <img class="demo-img" src="assets/olist-demo.png" alt="Dashboard preview" onerror="this.style.display='none'">
+            <div class="img-fallback">
+              <strong>Add dashboard screenshots</strong>
+              <p class="muted">Place preview images at <code>assets/olist-demo.png</code> and <code>assets/olist-cover.png</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MINI CHARTS / VISUALS -->
+        <div class="mini-charts reveal">
+          <div class="mini-chart card">
+            <h4>Trend Snapshot</h4>
+            <img src="assets/chart-trend.png" alt="Trend chart" onerror="this.style.display='none'">
+            <p class="muted">Add an exported PNG from Tableau/Excel at <code>assets/chart-trend.png</code>.</p>
+          </div>
+          <div class="mini-chart card">
+            <h4>Geo Snapshot</h4>
+            <img src="assets/chart-geo.png" alt="Geo chart" onerror="this.style.display='none'">
+            <p class="muted">Add a map screenshot at <code>assets/chart-geo.png</code>.</p>
+          </div>
+          <div class="mini-chart card">
+            <h4>Bottleneck Breakdown</h4>
+            <img src="assets/chart-breakdown.png" alt="Breakdown chart" onerror="this.style.display='none'">
+            <p class="muted">Add a breakdown chart at <code>assets/chart-breakdown.png</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Projects</h2>
+            <p class="muted">Search + filter to find the work that matches the role.</p>
+          </div>
+
+          <div class="controls">
+            <input id="search" type="search" placeholder="Search projects (e.g., Tableau, SQL, ML)" aria-label="Search projects" />
+            <select id="tagFilter" aria-label="Filter by tag">
+              <option value="all">All tags</option>
+              <option value="sql">SQL</option>
+              <option value="python">Python</option>
+              <option value="tableau">Tableau</option>
+              <option value="ml">ML</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="projectGrid" class="grid">
+          <a class="project-card card reveal"
+             href="projects/olist.html"
+             data-tags="sql,tableau,python"
+             data-title="Fulfillment Performance & Bottleneck Analysis">
+            <img class="thumb" src="assets/olist-cover.png" alt="Project thumbnail" onerror="this.style.display='none'">
+            <div class="project-top">
+              <h3>Fulfillment Performance & Bottleneck Analysis</h3>
+              <p class="muted">Olist Brazilian E-Commerce (2016–2018)</p>
+            </div>
+            <p class="project-desc">
+              Diagnoses delivery delays, decomposes cycle time, and identifies bottlenecks using SQL-engineered metrics and dashboard storytelling.
+            </p>
+            <div class="tags"><span>SQL</span><span>Tableau</span><span>Python</span></div>
+          </a>
+
+          <a class="project-card card placeholder reveal"
+             href="#"
+             aria-disabled="true"
+             tabindex="-1"
+             data-tags="ml,python"
+             data-title="Planned: Market Sentiment vs Price Action">
+            <div class="project-top">
+              <h3>Planned: Market Sentiment vs Price Action</h3>
+              <p class="muted">Finance • NLP • Time series</p>
+            </div>
+            <p class="project-desc">
+              Pipeline to collect sentiment, engineer features, and test whether sentiment leads price movements.
+            </p>
+            <div class="tags"><span>ML</span><span>Python</span></div>
+          </a>
+
+          <a class="project-card card placeholder reveal"
+             href="#"
+             aria-disabled="true"
+             tabindex="-1"
+             data-tags="sql,python"
+             data-title="Planned: ETF Overlap & Concentration Risk">
+            <div class="project-top">
+              <h3>Planned: ETF Overlap & Concentration Risk</h3>
+              <p class="muted">Finance • Portfolio analytics</p>
+            </div>
+            <p class="project-desc">
+              Tool that quantifies overlap across ETFs and exposes hidden concentration by issuer and sector.
+            </p>
+            <div class="tags"><span>SQL</span><span>Python</span></div>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education" class="section">
-      <div class="section-head reveal">
-        <div>
-          <h2>Education</h2>
-          <p class="muted">Degrees and academic focus</p>
-        </div>
-      </div>
-
-      <div class="edu-grid">
-        <div class="card edu reveal">
-          <div class="edu-top">
-            <img class="edu-logo" src="assets/mercer.png" alt="Mercer University logo" onerror="this.style.display='none'">
-            <div>
-              <h3>Mercer University</h3>
-              <p class="muted">M.S. Applied Data Intelligence & Machine Learning (Expected 2026)</p>
-            </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Education</h2>
+            <p class="muted">Degrees and academic focus</p>
           </div>
-          <ul class="muted bullets">
-            <li>Machine learning, analytics, and end-to-end projects</li>
-            <li>Tools: Python, SQL, Tableau</li>
-          </ul>
         </div>
 
-        <div class="card edu reveal">
-          <div class="edu-top">
-            <img class="edu-logo" src="assets/gsu.png" alt="Georgia Southern University logo" onerror="this.style.display='none'">
-            <div>
-              <h3>Georgia Southern University</h3>
-              <p class="muted">MBA, Management (2024)</p>
+        <div class="edu-grid">
+          <div class="card edu reveal">
+            <div class="edu-top">
+              <img class="edu-logo" src="assets/mercer.png" alt="Mercer University logo" onerror="this.style.display='none'">
+              <div>
+                <h3>Mercer University</h3>
+                <p class="muted">M.S. Applied Data Intelligence & Machine Learning (Expected 2026)</p>
+              </div>
             </div>
+            <ul class="bullets muted">
+              <li>Machine learning, analytics, and end-to-end projects</li>
+              <li>Tools: Python, SQL, Tableau</li>
+            </ul>
           </div>
-          <ul class="muted bullets">
-            <li>Strategy, operations, and data-driven decision-making</li>
-          </ul>
-        </div>
 
-        <div class="card edu reveal">
-          <div class="edu-top">
-            <img class="edu-logo" src="assets/ksu.png" alt="Kennesaw State University logo" onerror="this.style.display='none'">
-            <div>
-              <h3>Kennesaw State University</h3>
-              <p class="muted">B.S. Business Administration (Marketing) (2022)</p>
+          <div class="card edu reveal">
+            <div class="edu-top">
+              <img class="edu-logo" src="assets/gsu.png" alt="Georgia Southern University logo" onerror="this.style.display='none'">
+              <div>
+                <h3>Georgia Southern University</h3>
+                <p class="muted">MBA, Management (2024)</p>
+              </div>
             </div>
+            <ul class="bullets muted">
+              <li>Strategy, operations, and data-driven decision-making</li>
+            </ul>
           </div>
-          <ul class="muted bullets">
-            <li>Business fundamentals and analytical communication</li>
-          </ul>
+
+          <div class="card edu reveal">
+            <div class="edu-top">
+              <img class="edu-logo" src="assets/ksu.png" alt="Kennesaw State University logo" onerror="this.style.display='none'">
+              <div>
+                <h3>Kennesaw State University</h3>
+                <p class="muted">B.S. Business Administration (Marketing) (2022)</p>
+              </div>
+            </div>
+            <ul class="bullets muted">
+              <li>Business fundamentals and analytical communication</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section reveal">
-      <h2>Contact</h2>
-      <p class="muted">The best way to reach me is LinkedIn.</p>
+    <section id="contact" class="section">
+      <div class="container reveal">
+        <h2>Contact</h2>
+        <p class="muted">Best way to reach me is LinkedIn.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <p class="muted">© <span id="year"></span> Kyle Morgan • Built with GitHub Pages</p>
+  <footer class="footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Kyle Morgan • Built with GitHub Pages</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
