@@ -1,3 +1,7 @@
+/* UNBRICK: force all content visible no matter what */
+.reveal { opacity: 1 !important; transform: none !important; }
+
+
 :root {
   --bg: #0b0f17;
   --card: #121a27;
@@ -373,6 +377,7 @@ input:focus-visible, select:focus-visible {
     transition: none;
   }
 }
+
 
 
 
